@@ -1,0 +1,19 @@
+OVERVIEW
+
+This is an authentication module for Movable Type derived from the included
+BasicAuth.pm module.  It is intended for organizations using CoSign and LDAP
+who wish to extend their single sign-on capabilities to the free edition of
+Movable Type.
+
+At the time of this writing, this module is deemed in a "workable" state; it is
+probably not perfect.  It is not a plug-and-play solution, but will hopefully
+save somebody somewhere some sweat and tears.
+
+USAGE
+
+- Edit the LDAP-related code in CoSign.pm to suit your LDAP server and schema.
+- Place CoSign.pm in lib/MT/Auth
+- Add the following to mt-config.cgi:
+
+  AuthenticationModule CoSign
+  ExternalUserManagement 1
